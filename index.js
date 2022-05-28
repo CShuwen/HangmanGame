@@ -13,7 +13,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/game", (req, res) => {
-    res.sendFile(__dirname + "game.html");
-}
-);
+    res.sendFile(__dirname + "/game.html");
+});
 
