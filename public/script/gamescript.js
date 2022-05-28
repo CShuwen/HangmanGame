@@ -14,9 +14,11 @@ const body = document.querySelector(".manbody");
 
 const hangmanParts = [head, body, arm1, arm2, leg1, leg2];
 
-const words = ['application', 'programming', 'interface', 'wizard'];
+let selectedWord = localStorage.getItem("word");
 
-let selectedWord = words[Math.floor(Math.random() * words.length)];
+// const words = ['application', 'programming', 'interface', 'wizard'];
+
+// let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const correctLetters = [];
 const wrongLetters = [];
@@ -97,19 +99,15 @@ window.addEventListener('keydown', e =>{
     }
 });
 
-//Restart game and play again
 playAgainBtn.addEventListener('click', () => {
-    //Empty arrays
     correctLetters.splice(0);
     wrongLetters.splice(0);
-
     selectedWord = words[Math.floor(Math.random() * words.length)];
-
     lettersDisplay();
-
     wrongGuessDisplay();
-
     popup.style.display = 'none';
+
 });
 
 lettersDisplay();
+localStorage.setItem("word", '');
