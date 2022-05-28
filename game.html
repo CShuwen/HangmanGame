@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gamestyle.css">
+</head>
+<body>
+     <p class="heading">Guess the Hidden Letter</p>
+     <p class="player2">Player 2: (key in lower case alphabet)</p>
+    <div class = "game-container">
+        <svg height="400" width="400" class="hangman-container">
+            <line x1="20" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="20" y1="20" x2="20" y2="400" />
+            <line x1="0" y1="400" x2="100" y2="400" />
+            <circle cx="140" cy="90" r="40" class="manhead" />
+            <ellipse cx="140" cy="190" rx="40" ry="60" class="manbody" />
+            <line x1="175" y1="160" x2="210" y2="140" class="manarm1" />
+            <line x1="105" y1="160" x2="70" y2="140" class="manarm2" />
+            <line x1="160" y1="245" x2="178" y2="320" class="manleg1" />
+            <line x1="120" y1="245" x2="108" y2="320" class="manleg2" />
+        </svg>
+
+        <div class="wrongguess-container">
+            <div id="wrongguess"></div>
+        </div>
+        <div class="rightguess" id="rightguess"></div>
+    </div>
+
+    <!-- Container for final message -->
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <button id="play-button">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-container" id="notification-container">
+        <p>You have already entered this letter</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script src="gamescript.js"></script>
+</html>
