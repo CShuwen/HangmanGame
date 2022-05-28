@@ -1,0 +1,55 @@
+* {
+    font-family: Muli, sans-serif;
+    background-color: #3B6978;
+}
+
+div{
+    color: #E7DFD5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 22rem;
+    margin: 0;
+    overflow: hidden;
+}
+
+.heading{
+    color: #2F2F2F;
+    font-size: 2rem;
+    font-family: Muli, sans-serif;
+    margin-top: 2rem;
+}
+
+.player1 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+input{
+    border: none;
+    background-color: #84A9AC;
+    outline: none;
+    float: center;
+    padding: 0px 8px;
+    color:#E7DFD5;
+    font-size: 1.8rem;
+    transition: 0.4s;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+}
+
+button {
+	padding: 5px 14px;
+	background-color: #84A9AC;
+	border: none;
+	border-radius: 1px;
+	cursor: pointer;
+    margin-top: 2rem;
+	transition: all 0.3 ease 0s;
+}
+
+button:hover {
+	background-color: #3B6978;
+    position: relative;
+}
