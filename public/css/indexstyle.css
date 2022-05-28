@@ -1,6 +1,13 @@
 *{
     background-color: #3B6978;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1{
     align-items: center;
     text-align: center;
@@ -9,22 +16,17 @@ h1{
     margin-top: 20vh;
 }
 a {
-    padding: 10px 28px;
-    display: flex;
-    justify-content: center;
+    padding: 1rem 1rem;
     background-color: #84A9AC;
     border: none;
     border-radius: 1px;
     cursor: pointer;
-    transition: all 0.3 ease 0s;
     font-family: Muli, sans-serif;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 2rem;
     color: #E7DFD5;
     text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10vh;
+    margin-top: 3rem;
 }
 a:hover {
     background-color: #3B6978;
