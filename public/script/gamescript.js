@@ -4,7 +4,7 @@ const playAgainBtn = document.getElementById('play-button');
 const popup = document.getElementById('popup-container');
 const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
-const showWord = document.getElementById('show-word');
+// const showWord = document.getElementById('show-word');
 
 const head = document.querySelector(".manhead");
 const arm1 = document.querySelector(".manarm1");
@@ -16,7 +16,7 @@ const body = document.querySelector(".manbody");
 const hangmanParts = [head, body, arm1, arm2, leg1, leg2];
 
 let selectedWord = localStorage.getItem("word");
-let show = 'The Word is' + selectedWord;
+// let show = 'The Word is' + selectedWord;
 
 const correctLetters = [];
 const wrongLetters = [];
@@ -35,7 +35,6 @@ function lettersDisplay(){
 
     if(innerWord === selectedWord){
         finalMessage.innerText = 'Congratulations! Player2 won!';
-        showWord.innerText = show;
         popup.style.display= 'flex';
     }
 }
@@ -57,8 +56,6 @@ function wrongGuessDisplay(){
  
     if(wrongLetters.length === hangmanParts.length){
         finalMessage.innerText = 'Congratulations! Player1 Won!';
-        
-        showWord.innerText = show;
         popup.style.display = 'flex';
     }
 }
@@ -94,7 +91,7 @@ window.addEventListener('keydown', e =>{
 });
 
 playAgainBtn.addEventListener('click', () => {
-    window.location.href = "/player1"
+    window.location.href = "/player1";
 });
 
 lettersDisplay();
