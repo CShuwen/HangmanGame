@@ -16,14 +16,9 @@ const hangmanParts = [head, body, arm1, arm2, leg1, leg2];
 
 let selectedWord = localStorage.getItem("word");
 
-// const words = ['application', 'programming', 'interface', 'wizard'];
-
-// let selectedWord = words[Math.floor(Math.random() * words.length)];
-
 const correctLetters = [];
 const wrongLetters = [];
 
-//Show hidden word
 function lettersDisplay(){
     rightguess.innerHTML = `
     ${selectedWord.split('').map(
@@ -37,14 +32,12 @@ function lettersDisplay(){
     const innerWord = rightguess.innerText.replace(/\n/g, '');
 
     if(innerWord === selectedWord){
-        finalMessage.innerText = 'Congratulations! You won! 😃';
+        finalMessage.innerText = 'Congratulations! Player2 won!';
         popup.style.display= 'flex';
     }
 }
 
-// Update the wrong letters
 function wrongGuessDisplay(){
-    //Display wrong letters
     wrongGuess.innerHTML = `
     ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
@@ -60,21 +53,18 @@ function wrongGuessDisplay(){
     };
  
     if(wrongLetters.length === hangmanParts.length){
-        finalMessage.innerText = 'Unfortunately you lost. 😕';
+        finalMessage.innerText = 'Congratulations! Player1 Won!';
         popup.style.display = 'flex';
     }
 }
 
-//Show notification
 function showNotification(){
     notification.classList.add('show');
-
     setTimeout(() => {
         notification.classList.remove('show');
     }, 2000);
 }
 
-//Keydown letter press
 window.addEventListener('keydown', e =>{
     if(e.keyCode >= 65 && e.keyCode <=90){
         const letter = e.key;
@@ -82,7 +72,6 @@ window.addEventListener('keydown', e =>{
         if(selectedWord.includes(letter)){
             if(!correctLetters.includes(letter)){
                 correctLetters.push(letter);
-
                 lettersDisplay();
             } else{
                 showNotification();
@@ -102,11 +91,11 @@ window.addEventListener('keydown', e =>{
 playAgainBtn.addEventListener('click', () => {
     correctLetters.splice(0);
     wrongLetters.splice(0);
-    selectedWord = words[Math.floor(Math.random() * words.length)];
-    lettersDisplay();
-    wrongGuessDisplay();
-    popup.style.display = 'none';
-
+    // selectedWord = words[Math.floor(Math.random() * words.length)];
+    // lettersDisplay();
+    // wrongGuessDisplay();
+    // popup.style.display = 'none';
+    window.location.href = "/player1"
 });
 
 lettersDisplay();
