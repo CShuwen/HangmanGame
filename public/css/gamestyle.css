@@ -103,8 +103,9 @@ body{
     text-align: center;
 }
 
-h2 {
+h2, h3 {
     background: none;
+    color: #3B6978;
 }
 .popup button{
     cursor: pointer;
