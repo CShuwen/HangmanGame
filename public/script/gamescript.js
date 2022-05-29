@@ -15,8 +15,8 @@ const body = document.querySelector(".manbody");
 
 const hangmanParts = [head, body, arm1, arm2, leg1, leg2];
 
-prompt();
 let selectedWord = localStorage.getItem("word");
+let show = 'The Word is' + selectedWord;
 
 const correctLetters = [];
 const wrongLetters = [];
@@ -35,7 +35,7 @@ function lettersDisplay(){
 
     if(innerWord === selectedWord){
         finalMessage.innerText = 'Congratulations! Player2 won!';
-        showWord.innerText = 'The Word is' + selectedWord;
+        showWord.innerText = show;
         popup.style.display= 'flex';
     }
 }
@@ -57,7 +57,8 @@ function wrongGuessDisplay(){
  
     if(wrongLetters.length === hangmanParts.length){
         finalMessage.innerText = 'Congratulations! Player1 Won!';
-        showWord.innerText = 'The Word is' + selectedWord;
+        
+        showWord.innerText = show;
         popup.style.display = 'flex';
     }
 }
