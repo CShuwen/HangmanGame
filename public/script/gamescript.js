@@ -14,6 +14,7 @@ const body = document.querySelector(".manbody");
 
 const hangmanParts = [head, body, arm1, arm2, leg1, leg2];
 
+prompt();
 let selectedWord = localStorage.getItem("word");
 
 const correctLetters = [];
@@ -89,10 +90,7 @@ window.addEventListener('keydown', e =>{
 });
 
 playAgainBtn.addEventListener('click', () => {
-    // correctLetters.splice(0);
-    // wrongLetters.splice(0);
     window.location.href = "/player1"
 });
 
 lettersDisplay();
-localStorage.setItem("word", '');

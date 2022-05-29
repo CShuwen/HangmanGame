@@ -1,13 +1,4 @@
-// let btn = document.querySelector("button");
 let input = document.querySelector("input");
-
-// let words = [];
-// let currenPlayer = 1;
-
-
-// btn.addEventListener('click', () => {
-//     words.unshift(input.value);
-// });
 
 function sendWord() {
     const string = input.value;
