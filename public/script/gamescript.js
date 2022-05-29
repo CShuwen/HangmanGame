@@ -16,7 +16,7 @@ const body = document.querySelector(".manbody");
 const hangmanParts = [head, body, arm1, arm2, leg1, leg2];
 
 let selectedWord = localStorage.getItem("word");
-let showAns = 'The Word is' + selectedWord;
+let showAns = 'The Word is: ' + selectedWord;
 
 const correctLetters = [];
 const wrongLetters = [];
