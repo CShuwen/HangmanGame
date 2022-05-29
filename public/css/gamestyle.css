@@ -96,17 +96,20 @@ body{
 }
 
 .popup{
-    background-color: #204051;
+    background-color: #84A9AC;
     border-radius: 5px;
     box-shadow: 0 15px 10px 3px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: center;
 }
 
+h2 {
+    background: none;
+}
 .popup button{
     cursor: pointer;
     background-color:  #E7DFD5;
-    color: #204051;
+    color: #2980b9;
     border: 0;
     margin-top: 20px;
     padding: 12px 20px;
