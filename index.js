@@ -18,7 +18,7 @@ app.get("/player1", (req, res) => {
     res.sendFile(__dirname + "/player1.html");
 });
 
-app.get("/game", (req, res) => {
+app.get("/player1/game", (req, res) => {
     res.sendFile(__dirname + "/game.html");
 });
 

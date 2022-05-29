@@ -15,5 +15,5 @@ function sendWord() {
         alert("input a word in the text frame");
     }
     localStorage.setItem("word", string);
-    window.location.href = "game.html";
+    window.location.href = "/game";
 }
